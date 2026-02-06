@@ -1,5 +1,5 @@
 {
-    "name": "LEAGUE_spaceInvaders1",
+    "name": "LEAGUE_spaceInvaders",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -10,7 +10,8 @@
         "README.md",
         "assets.json",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "tutorial.md"
     ],
     "testFiles": [
         "test.ts"
@@ -26,5 +27,5 @@
     "supportedTargets": [
         "arcade"
     ],
-    "preferredEditor": "blocksprj"
+    "preferredEditor": "tsprj"
 }

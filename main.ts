@@ -26,16 +26,16 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Miniboss, function (sprite, othe
     info.changeLifeBy(-2)
     pause(200)
 })
-info.onScore(3, function () {
-    game.gameOver(true)
-    game.setGameOverEffect(true, effects.confetti)
-    game.setGameOverMessage(true, "YOU WIN!")
-    music.stopAllSounds()
-})
 info.onLifeZero(function () {
     game.gameOver(false)
     game.setGameOverEffect(false, effects.dissolve)
     game.splash("👾YOU LOSE👾")
+    music.stopAllSounds()
+})
+info.onScore(50, function () {
+    game.gameOver(true)
+    game.setGameOverEffect(true, effects.confetti)
+    game.setGameOverMessage(true, "YOU WIN!")
     music.stopAllSounds()
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Miniboss, function (sprite, otherSprite) {

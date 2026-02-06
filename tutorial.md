@@ -403,9 +403,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Miniboss, function (sprite, othe
 
 ## Step 29 - Create win condition
 
-Let's set up what happens when you win! Drag ``||info:on score 50||`` from ``||info:Info||``.
+Let's set up what happens when you win! Drag ``||info:on score 3||`` from ``||info:Info||``.
 ```blocks
-info.onScore(50, function () {
+info.onScore(3, function () {
     
 })
 ```
@@ -414,7 +414,7 @@ info.onScore(50, function () {
 
 Inside the score event, add ``||game:game over WIN||`` and set it to **true**, then add ``||game:set game over effect||`` to **true** with **confetti** effect, and ``||game:set game over message||`` to **true** with text `"YOU WIN!"`. Finally add ``||music:stop all sounds||``.
 ```blocks
-info.onScore(50, function () {
+info.onScore(3, function () {
     game.gameOver(true)
     game.setGameOverEffect(true, effects.confetti)
     game.setGameOverMessage(true, "YOU WIN!")
@@ -454,7 +454,7 @@ music.play(music.createSong(hex`0078000408020205001c000f0a006400f4010a0000040000
 
 Congratulations! You've built an epic space shooter game! 🚀
 
-Try playing your game and see if you can reach a score of 50 to win! Here are some ideas to make it even better:
+Try playing your game and see if you can reach a score of 3 to win! Here are some ideas to make it even better:
 
 - Add more enemy types with different behaviors
 - Create power-ups that restore health or give special weapons
